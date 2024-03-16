@@ -1,0 +1,38 @@
+.navbar > .container {
+    margin-left: 20px;
+}
+
+.red-color {
+    color: #f44a4a;
+}
+
+.menu-btn {
+    margin-left: 50px;
+    color: #505763;
+    font-family: "Poppins", sans-serif;
+
+    background-color: transparent;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    font-family: "Poppins", sans-serif;
+}
+
+.nav-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.owl-item:hover {
+    background-color: black;
+}
+
+@media all and (max-width: 767.4px) {
+    .nav-control {
+        justify-content: center;
+        margin-top: 40px;
+    }
+}

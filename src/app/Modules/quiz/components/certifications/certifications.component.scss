@@ -1,0 +1,247 @@
+.active{
+    color: rgb(31, 31, 31) !important;
+}
+
+section#over-view{
+    background-color: rgb(255, 158, 158);
+    background-image: url("../../../../../assets/imgs/academy-certification-hero-background.webp.png");
+    background-repeat: repeat-y;
+    background-size: 20%;
+    background-position-x: left;
+    color: #fff;
+    padding: 50px 0px;
+
+    animation-name: Stepper;
+    animation-duration: 15s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1, 1, 1, 1);
+}
+
+@keyframes Stepper {
+    0% {
+        background-position-y: -500px;
+    }
+    100% {
+        background-position-y: 500px;
+    }
+}
+
+main#certificates{
+    padding: 50px 0px;
+    background-color: #F5F8FA;
+    .item{
+        position: relative;
+        background-color: rgb(255, 255, 255);
+        box-shadow: rgb(45 62 80 / 8%) 0px 3px 6px 0px;
+        transition: all 0.8s;
+        cursor: pointer;
+        color: #2D3E50;
+        padding-bottom: 20px;
+        transition: all 0.8s;
+        &:hover{
+            transform: translateY(-5px);
+            .certificates-card-footer button{
+                background-color: #FF9E9E;
+            }
+        }
+        .certificates-card-header{
+            position: relative;
+            background-color: rgb(255, 255, 255);
+            z-index: 5;
+            padding: 20px;
+            border-top: 0.625rem solid rgb(255, 158, 158);
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            border-bottom: 1px solid #eeeeee;
+            &:hover{
+                background-color: #F5F8FA;
+            }
+            small{
+                color: rgb(255, 158, 158);
+                font-weight: 500;
+            }
+            .cert-logo{
+                position: absolute;
+                background-color: rgb(255, 158, 158);
+                padding: 10px;
+                color: #fff;
+                top: -1px;
+                right: 20px;
+                border-radius:0px 0px 25px 25px;
+            }
+            h4{
+                margin: 30px 0px;
+            }
+        }
+        .certificates-card-body{
+            position: relative;
+            svg{
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+            .title {
+                text-transform: uppercase;
+                font-size: 0.75rem;
+                font-weight: 700;
+                line-height: 1.125rem;
+                padding-left: 20px;
+                padding-top: 20px;
+            }
+            .content {
+                display: block;
+                font-size: 0.75rem;
+                font-weight: 400;
+                line-height: 1.75;
+                margin-bottom: 1rem;
+                padding: 20px;
+                max-width: 200px;
+                a {
+                    color: #0091ae;
+                    font-weight: 600;
+                    text-decoration: none;
+                    transition: all 0.8s;
+                    &:hover{
+                        color: rgb(255, 158, 158);
+                    }
+                }
+            }
+        }
+        .certificates-card-footer{
+            text-align: center;
+            button{
+                background-color: #2D3E50;
+                color: white;
+                padding: 10px 50px;
+            }
+        }
+    }
+}
+
+.container{
+    max-width: 1160px;
+}
+
+.hmGqkv {
+    border-radius: 3px;
+    height: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 1;
+    background: rgb(234, 240, 246);
+    top: -18px;
+    width: 85%;
+}
+
+.lpnHmY {
+    border-radius: 3px;
+    height: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+    background: rgb(223, 227, 235);
+    top: -12px;
+    width: 90%;
+}
+
+.hUSlTS {
+    border-radius: 3px;
+    height: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 3;
+    background: rgb(203, 214, 226);
+    top: -6px;
+    width: 95%;
+}
+
+section#cert-info{
+    color: #2D3E50;
+    h2{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .why-get-certified__description{
+        text-align: left;
+    }
+
+}
+
+section#cert-process{
+    text-align: center;
+    background-color: #516f90;
+    color: white;
+    padding: 50px 0px;
+    .certs-process__body{
+        display: flex;
+        justify-content: space-between;
+    }
+    .certs-process__item {
+        margin-top: 2rem;
+        flex-basis: calc(33.3333% - 3rem);
+        &:last-child .certs-process__item-heading::after {
+            display: none;
+        }
+        .certs-process__item-heading {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-top: 20px;
+            line-height: 1.5625rem;
+            position: relative;
+            &::after {
+                display: initial;
+                content: url("../../../../../assets/imgs/next-arrow.svg");
+                position: absolute;
+                right: -3.5rem;
+                top: -4rem;
+                left: auto;
+            }
+        }
+
+        .certs-process__description{
+            font-size: 13px;
+            margin-top: 20px;
+        }
+
+        .certs-process__icon-wrapper{
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            margin-bottom: 40px;
+        }
+    }
+    .certs-process_footer{
+        text-align: center;
+        margin-top: 40px;
+        button{
+            color: #516f90;
+            padding: 15px 30px;
+            &:hover{
+                background-color: rgb(243, 243, 243) !important;
+            }
+        }
+    }
+    
+}
+
+@media all and (max-width: 1025px)
+{
+    .certs-process__body {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .certs-process__item-heading::after{
+        content: url("../../../../../assets/imgs/arrow-down.svg") !important;
+        top: 370% !important;
+        left: 0% !important;
+        right: 0% !important;
+    }
+
+    header ul li{
+        padding: 0px 25px;
+    }
+}

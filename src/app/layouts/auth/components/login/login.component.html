@@ -1,0 +1,99 @@
+<section class="signup-block-main-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="signup-heading">
+                    <p>Log In to Your eClass-LearningManagementSystem Account!</p>
+                </div>
+                <div class="signup-block">
+                    <div class="signin-link mb-3">
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <a href="#" class="btn btn-info mb-3">
+                                    <i class="fab fa-facebook-f" style="margin-right: 10px;"></i>
+                                    Continue with Facebook</a>
+                            </div>
+                            <div class="col-xl-6">
+                                <a href="#" class="btn btn-info mb-3" style="background-color: #DB4A39;">
+                                    <i class="fab fa-google-plus-g" style="margin-right: 10px;"></i>
+                                    Continue with Google</a>
+                            </div>
+                            <div class="col-xl-6">
+                                <a href="#" class="btn btn-info mb-3" style="background-color: #ff9900; color: black;">
+                                    <i class="fab fa-amazon" style="margin-right: 10px;"></i>
+                                    Continue with Amazon</a>
+                            </div>
+                            <div class="col-xl-6">
+                                <a href="#" class="btn btn-info mb-3" style="background-color: #0e76a8;">
+                                    <i class="fab fa-linkedin-in" style="margin-right: 10px;"></i>
+                                    Continue with Linkedin</a>
+                            </div>
+                            <div class="col-xl-6">
+                                <a href="#" class="btn btn-info mb-3" style="background-color: #1bb2e9;">
+                                    <i class="fab fa-twitter" style="margin-right: 10px;"></i>
+                                    Continue with Twitter</a>
+                            </div>
+                            <div class="col-xl-6">
+                                <a href="#" class="btn btn-info mb-3"
+                                    style="background-color: #fff; color: black;box-shadow: 1px 1px 5px rgb(211, 211, 211);">
+                                    <i class="fab fa-gitlab" style="margin-right: 10px;"></i>
+                                    Continue with Git Lab</a>
+                            </div>
+                        </div>
+                        <form class="signup-form" [formGroup]='loginForm' (ngSubmit)='onSubmit(loginForm)'>
+                            <div class="form-group">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <input id="email" type="email" class="form-control" placeholder="Enter Your E-Mail"
+                                    name="email" value="" required="" autofocus="" formControlName='email'>
+                                <div style="text-align: left;">
+                                    <small class="text-danger ml-1" *ngIf="loginForm.get('email')?.touched &&
+                                    loginForm.get('email')?.hasError('email')">Email is not valid.</small>
+                                    <small class="text-danger ml-1" *ngIf="loginForm.get('email')?.touched &&
+                                    loginForm.get('email')?.hasError('required')">This field is required.</small>
+                                </div>
+                            </div>
+    
+                            <div class="form-group">
+                                <i class="fa fa-lock" aria-hidden="true"></i>
+                                <input id="password" type="password" class="form-control" placeholder="Enter Your Password"
+                                    name="password" required=""  formControlName='password'>
+                                <div style="text-align: left;">
+                                    <small class="text-danger ml-1" *ngIf="loginForm.get('password')?.touched &&
+                                    loginForm.get('password')?.hasError('required')">This field is required.</small>
+                                </div>
+                            </div>
+                            <!-- <div class="form-group">
+                                <div class="form-check flex-center">
+                                    <input class="form-check-input mb-1" type="checkbox" name="remember" id="remember">
+                                    <label class="form-check-label mb-0" for="remember">
+                                        Remember Me
+                                    </label>
+                                </div>
+                            </div> -->
+    
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid" 
+                                [innerHTML]='addSpinner ?  spinner: "Login" '></button>
+                                <br>
+                                <br>
+                                <div class="forgot-password text-center btm-20"><a href="#" title="sign-up">Forgot
+                                        Password</a>
+                                </div>
+    
+                            </div>
+    
+    
+                            <div class="signin-link text-center btm-20">
+                                By signing up, you agree to our <a href="#">Privacy Policy.</a>
+                            </div>
+                            <hr>
+                            <div class="sign-up text-center">Do not have an account?<a href="" routerLink="/auth/register" title="sign-up"> Signup</a>
+                            </div>
+    
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

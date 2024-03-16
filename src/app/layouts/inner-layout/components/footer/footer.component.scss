@@ -1,0 +1,43 @@
+
+.footer-main-block {
+    background: #29303B;
+}
+
+.footer-block {
+    padding: 30px 0 10px;
+}
+
+footer ul{
+    list-style-type: none;
+    padding: 15px 0px 0px 0px;
+}
+
+footer ul li{
+    padding: 7px 0px;
+    font-weight: lighter;
+    color: #fff;
+}
+
+footer a{
+    text-decoration: none;
+    color: #fff;
+}
+
+footer b{
+    color: #fff;
+}
+
+/* Border */
+::ng-deep {
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+        color: rgb(172, 172, 172);
+    }
+    mat-form-field {
+        .mat-hint, input, ::placeholder, .mat-form-field-label {
+            color: rgb(172, 172, 172);
+        }
+    }
+    .mat-select-arrow{
+        color: #fff !important;
+    }
+}

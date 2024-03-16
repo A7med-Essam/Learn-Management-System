@@ -1,0 +1,25 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-light  bg-ligth ">
+        <div class="container-fluid ">
+            <img src="../../../assets/imgs/logo.png" routerLink="/landing/home" class="img-fluid pointer"
+                style="width: 150px;margin-left: 20px;" alt="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+
+                <div class="nav-control">
+                    <button class="btn mx-2 btn-main" *ngIf="!isLogin" type="submit" routerLink='/auth/login'
+                        style="box-shadow: none;">Login</button>
+                    <button class="btn mx-2 btn-sec" *ngIf="!isLogin" type="submit" routerLink='/auth/register'
+                        style="box-shadow: none;">Register</button>
+                    <button class="btn mx-2 btn-sec" *ngIf="isLogin" type="button" routerLink="/landing/profile"
+                        style="box-shadow: none;">Profile</button>
+                    <button class="btn mx-2 btn-sec" *ngIf="isLogin" type="submit" style="box-shadow: none;"
+                        (click)="logOut()">LogOut</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

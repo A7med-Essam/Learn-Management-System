@@ -1,0 +1,173 @@
+<section class="main-sec container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="block-heading">
+                    <!-- <h1>{{topic.title}}</h1> -->
+                    <!-- <p>{{topic.desc}}</p> -->
+                    <ul>
+                        <li>
+                            <!-- <div class="small-ratings ">
+                                <i *ngFor="let ratingId of [1,2,3,4,5];" data-toggle="tooltip" data-placement="top"
+                                    [title]="ratingId" [id]="'star_'+ratingId" class="fa fa-star"
+                                    [ngClass]="(topic.rating !=undefined&& topic.rating >= ratingId )? 'rating-color': ''"></i>
+                            </div> -->
+
+                        </li>
+                        <li>
+                            <!-- {{topic.rating}} Rating -->
+                        </li>
+                        <li>
+                            <!-- ({{topic.reviews}} Reviews) -->
+                        </li>
+                        <li>
+                            <!-- {{topic.userEnrolled}} User Enrolled -->
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>Created by:
+                            <!-- {{topic.createdby}} -->
+                        </li>
+                        <!-- <li>Last Updated: {{topic.updated | date: 'mediumDate' }}</li> -->
+                        <!-- <li><i class="fa fa-comment"></i> {{topic.lang}}</li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="desc-icon text-white text-right my-3">
+                    <!-- <ul>
+                        <li><a class="heart"><i class="far fa-heart fa-lg me-3" id="wish" #wish
+                                    [ngClass]="mouseOvered&& wish.id=='wish'?'fa' :'far'" (mouseover)="mouseOvered=true"
+                                    (mouseout)="mouseOvered=false"></i>Wishlist</a></li>
+                    </ul> -->
+                </div>
+                <div class="desc-box ">
+                    <div class="img-item ">
+                        <!-- <img [src]="topic.imgpath"> -->
+                    </div>
+                    <div class="desc-content">
+                        <ul class="price-lst">
+                            <li>$ 400</li>
+                            <li> <del>$ 700</del> </li>
+                        </ul>
+                        <div class="d-grid">
+                            <button class="btn btn-sec mb-4" type="submit">Enroll</button>
+                        </div>
+                        <div class=" bt-5">
+                            <ul class="includs-lst bm-5">
+                                <li>Course Includes</li>
+                                <li><i class="fa fa-bullseye"></i>Full lifetime access</li>
+                                <li><i class="fa fa-mobile"></i>Access on mobile and TV</li>
+                                <li><i class="fa fa-clipboard"></i>On-demand video</li>
+                                <li><i class="fa fa-download"></i>downloadable resource</li>
+                            </ul>
+                            <hr>
+                            <div class="text-center">
+
+                                <a href="#" class="link-btn" title="share"><i class="fa fa-share me-2"></i>share</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</section>
+<section class="main-fixed-sec container-fluid" *ngIf="fixedTop">
+    <div class="container">
+        <div class="block-heading">
+            <h4>{{topic.title}}</h4>
+            <ul>
+                <li>
+                    <div class="small-ratings ">
+                        <i *ngFor="let ratingId of [1,2,3,4,5];" data-toggle="tooltip" data-placement="top"
+                            [title]="ratingId" [id]="'star_'+ratingId" class="fa fa-star"
+                            [ngClass]="(topic.rating!=undefined&& topic.rating >= ratingId )? 'rating-color': ''"></i>
+                    </div>
+                </li>
+                <li>
+                    {{topic.rating}} Rating
+                </li>
+                <li>
+                    ({{topic.reviews}} Reviews)
+                </li>
+                <li>
+                    {{topic.userEnrolled}} User Enrolled
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="detailed-sec container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="details-box">
+                    <h3>What you will learn</h3>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div>
+                                <ul>
+                                    <li><i class="far fa-check-circle me-2"></i>They will learn pencil techniques in
+                                        order to create
+                                        shirring/gathers, and shading, and the use of color pencils.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div>
+                                <ul>
+                                    <li><i class="far fa-check-circle me-2"></i>They will learn movement of the body,
+                                        balance, plumb
+                                        line.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div>
+                                <ul>
+                                    <li><i class="far fa-check-circle me-2"></i>They will learn about a fashion
+                                        diary/journal, as a
+                                        source of inspiration in order to be a great designer.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-list m-5">
+                    <h2 class="mb-3">Related Courses</h2>
+                    <div class="row  py-3   text-center" *ngFor="let item of relatedCourses;let i =index">
+                        <div class="col-lg-7 col-md-6 col-12">
+                            <div class="box d-flex ">
+                                <img [src]="item.img" alt="">
+                                <div class="py-1">
+                                    <h6>{{item.title}}
+                                    </h6>
+                                    <span style="display: block;"> Last Updated {{item .updated | date:'meduimDate'}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2  col-md-1 col-4 py-1">
+                            {{item.UserEnrolled}}<i class="far fa-user ms-1"></i>
+                        </div>
+                        <div class="col-lg-2  col-md-1 col-4 py-1">
+                            <ul class="price-lst" *ngIf="item .isFree==undefined && !item.isFree">
+                                <li>$ 400</li>
+                                <li>$ 700</li>
+                            </ul>
+                            <p *ngIf="item.isFree"> Free</p>
+                        </div>
+                        <div class="col-lg-1  col-md-2 col-4 py-1">
+                            <a class="heart"><i class="far fa-heart fa-lg me-3"
+                                    [ngClass]="mouseOvered&&  mouseOveredIndx==i?'fa' :'far'"
+                                    (mouseover)="mouseOvered=true;mouseOveredIndx=i;"
+                                    (mouseout)="mouseOvered=false;"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

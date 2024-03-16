@@ -1,0 +1,416 @@
+<div class="gradient-bg">
+    <div class="container">
+        <owl-carousel-o [options]="customOptions" style="text-align: center;">
+            <ng-container *ngFor="let category of categories">
+                <ng-template carouselSlide [id]="category.id.toString()">
+                    <a [routerLink]="'/landing/categories/'+category.id">
+                        {{category?.name}}
+                    </a>
+                </ng-template>
+            </ng-container>
+        </owl-carousel-o>
+    </div>
+</div>
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active first">
+            <div class="container">
+                <div class="carousel-caption text-start">
+                    <h1>Preparation Certificate Program</h1>
+                    <p>
+                        We have everything you need to advance your educational career <br>
+                        at a fraction of the time and cost of traditional online programs. <br>
+                        Earn a teaching credential with the most unique and effective online teacher preparation program
+                        in the world.
+                    </p>
+                    <div class="input-group search-div">
+                        <input type="text" class="form-control input-text"
+                            style="border: 3px solid #f44a4a;border-right: none; border-top-left-radius: 5px !important;border-bottom-left-radius: 5px !important;"
+                            placeholder="What do you want to learn?">
+                        <div class="input-group-append">
+                            <button class="btn btn-danger red-color btn-lg" type="button">
+                                <i class="fa fa-search text-white"></i></button>
+                        </div>
+                    </div>
+                    <p><a class="btn btn-lg btn-sec  mt-5" href="#team">Learn more</a></p>
+
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item second">
+            <div class="container">
+                <div class="carousel-caption text-start d-flex flex-column justify-content-center align-items-center">
+                    <h1>Get a Teacher Certification Online</h1>
+                    <p>our graduates are able to design and implement learning experiences to ensure that every student
+                        learns, grows, and develops. </p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item third">
+            <div class="container">
+                <div class="carousel-caption text-start">
+                    <h1>Learn from anywhere</h1>
+                    <p>We provide an affordable, timely, and flexible pathway for people anywhere in the world to earn a
+                        teaching certificate. Earn your high-impact teacher education online.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid gradient-bg">
+    <div class="container">
+        <div class="row  py-2">
+            <div class="col-lg-4 col-sm-6">
+                <div class="learning-block">
+                    <i class="fa fa-anchor fa-3x"></i>
+                    <div class="learning-work-dtl">
+                        <div class="work-heading">Learn Anytime, Anywhere</div>
+                        <p>Online Courses for Creative</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="learning-block">
+                    <i class="fa fa-magic"></i>
+                    <div class="learning-work-dtl">
+                        <div class="work-heading">Beacome a researcher</div>
+                        <p>Improve Your Skills Online</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="learning-block">
+                    <i class="fa fa-graduation-cap"></i>
+                    <div class="learning-work-dtl">
+                        <div class="work-heading">Most Popular Courses</div>
+                        <p>Learn on your schedule</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="team-div container-fluid ">
+    <div class="container team-content">
+        <div class="row">
+            <div class="col-lg-5 col-md-12">
+                <img src="../../../assets/imgs/Your_paragraph_text-removebg-preview.png" alt="" class="img-fluid">
+            </div>
+            <div class="col-lg-7 col-md-12 p-5">
+                <h1 class="pt-4">What is Learning?</h1>
+                <p>
+                    Although living brains are very complex, this module uses metaphor and analogy to help simplify
+                    matters.
+                    You will discover several fundamentally different modes of thinking, and how you can use these modes
+                    to improve your learning. You will also be introduced to a tool for tackling procrastination,
+                    be given some practical information about memory, and discover surprisingly useful
+                    insights about learning and sleep.
+                    <br><br>
+                    (You’ll also discover how to more profitably interact with fellow learners, how to recognize your
+                    own
+                    strengths)
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" *ngIf="recentTopics.length; else NoTopics">
+    <div class="container">
+        <div class="main-heading">
+            Recently Added Topics
+        </div>
+        <mat-tab-group animationDuration="1000ms">
+            <mat-tab [label]="topic.title" class="w-100"
+                *ngFor="let topic of recentTopics | slice:(TopicsCount-5):TopicsCount">
+                <div class="item mt-3">
+                    <mat-card class="example-card">
+                        <mat-card-title>{{topic?.title}}</mat-card-title>
+                        <mat-card-subtitle>{{topic?.created_at | date}}</mat-card-subtitle>
+                        <mat-card-content>
+                            <p>
+                                PHP started out as a small open source project that evolved as more and more people
+                                found out how useful it was. Rasmus Lerdorf unleashed the first version of PHP way back
+                                in 1994.
+                                PHP is a recursive acronym for "PHP: Hypertext Preprocessor".
+                                PHP is a server side scripting language that is embedded in HTML. It is used to manage
+                                dynamic content, databases, session tracking, even build entire e-commerce sites.
+                                It is integrated with a number of popular databases, including MySQL, PostgreSQL,
+                                Oracle, Sybase, Informix, and Microsoft SQL Server.
+                                PHP is pleasingly zippy in its execution, especially when compiled as an Apache module
+                                on the Unix side. The MySQL server, once started, executes even very complex queries
+                                with huge result sets in record-setting time.
+                                PHP supports a large number of major protocols such as POP3, IMAP, and LDAP. PHP4 added
+                                support for Java and distributed object architectures (COM and CORBA), making n-tier
+                                development a possibility for the first time.
+                                PHP is forgiving: PHP language tries to be as forgiving as possible.
+                                PHP Syntax is C-Like.
+                            </p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-button routerLink="/landing/certifications/over-view/{{topic?.id}}"
+                                class="bg-danger text-white">See All Certificates related by this topic</button>
+                        </mat-card-actions>
+                    </mat-card>
+                </div>
+            </mat-tab> 
+        </mat-tab-group> 
+    </div>
+</div>
+
+<ng-template #NoTopics>
+    <div class="text-center my-5">
+        <h1 class="text-center text-danger">You Must Sign In To See Recently Added Topics Section</h1>
+        <button mat-stroked-button color="warn" routerLink="/auth/login" class="px-5 mt-4">Sign In Now</button>
+    </div>
+</ng-template>
+
+<section class="pb-0">
+    <div class="borderGradient">
+        <img src="../../../assets/imgs/home image/159748969215908739281579934374banner (1).jpg" class="img-fluid"
+            alt="">
+    </div>
+</section>
+
+<section class="text-center">
+    <h2 style="font-weight: 900;color: #024764;font-size: 54px;">Over 100 courses</h2>
+    <div class="container mt-5">
+        <div class="row mx-0">
+            <div class="col-lg-6">
+                <div class="row course-card">
+                    <div class="col-9">
+                        <div class="content" style="text-align: right;">
+                            <h3>HTML Basic</h3>
+                            <p>Throughout my career, i have met some incredible talents. I have to
+                                say the Web Team ranks on top of my list. They </p>
+                        </div>
+                    </div>
+                    <div class="col-3 d-flex justify-content-center">
+                        <div class="icon img-circle">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row course-card">
+                    <div class="col-3 d-flex justify-content-center">
+                        <div class="icon img-circle">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="content" style="text-align: left;">
+                            <h3>UX Design</h3>
+                            <p>Throughout my career, i have met some incredible talents. I have to say the Web Team
+                                ranks on top of my list. They</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="row course-card">
+                    <div class="col-9">
+                        <div class="content" style="text-align: right;">
+                            <h3>Java</h3>
+                            <p>Throughout my career, i have met some incredible talents. I have to
+                                say the Web Team ranks on top of my list. They </p>
+                        </div>
+                    </div>
+                    <div class="col-3 d-flex justify-content-center">
+                        <div class="icon img-circle">
+                            <i class="fab fa-java"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row course-card">
+                    <div class="col-3 d-flex justify-content-center">
+                        <div class="icon img-circle">
+                            <i class="fas fa-database"></i>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="content" style="text-align: left;">
+                            <h3>SQL Server</h3>
+                            <p>Throughout my career, i have met some incredible talents. I have to say the Web Team
+                                ranks on top of my list. They</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="row course-card">
+                    <div class="col-9">
+                        <div class="content" style="text-align: right;">
+                            <h3>NodeJs</h3>
+                            <p>Throughout my career, i have met some incredible talents. I have to
+                                say the Web Team ranks on top of my list. They </p>
+                        </div>
+                    </div>
+                    <div class="col-3 d-flex justify-content-center">
+                        <div class="icon img-circle">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row course-card">
+                    <div class="col-3 d-flex justify-content-center">
+                        <div class="icon img-circle">
+                            <i class="fab fa-connectdevelop"></i>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="content" style="text-align: left;">
+                            <h3>DevOps</h3>
+                            <p>Throughout my career, i have met some incredible talents. I have to say the Web Team
+                                ranks on top of my list. They</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="team" class="pb-5">
+    <div class="container">
+        <h5 class="section-title h1">What our students say about us</h5>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="image-flip">
+                    <div class="mainflip flip-0">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid"
+                                            src="../../../assets/imgs/home image/students/157968868531.jpg"
+                                            alt="card image"></p>
+                                    <h4 class="card-title">Omnia Ali</h4>
+                                    <p class="card-text">
+                                        Omnia is a software engineer
+                                        <br>
+                                        Bachelor's degree in computer science.
+                                    </p>
+                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm">
+                                        Flip The Card for more
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside" style="overflow: hidden;">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">Angular - Workshop</h4>
+                                    <p class="card-text text-muted lead">
+                                        I like that all the information students receive is up-to-date.
+                                        The course is very interesting and engaging, and I can already feel how my
+                                        communication skills and
+                                        critical thinking skills are improving after my first course.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="image-flip">
+                    <div class="mainflip flip-0">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid"
+                                            src="../../../assets/imgs/home image/students/157968912636.png"
+                                            alt="card image"></p>
+                                    <h4 class="card-title">Mohamed Shaker</h4>
+                                    <p class="card-text">
+                                        Shaker is a software engineer
+                                        <br>
+                                        Bachelor's degree in computer science.
+                                    </p>
+                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm">
+                                        Flip The Card for more
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside" style="overflow: hidden;">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">Angular - Workshop</h4>
+                                    <p class="card-text text-muted lead">
+                                        I like that all the information students receive is up-to-date.
+                                        The course is very interesting and engaging, and I can already feel how my
+                                        communication skills and
+                                        critical thinking skills are improving after my first course.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="image-flip">
+                    <div class="mainflip flip-0">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid"
+                                            src="../../../assets/imgs/home image/students/158133327542.jpg"
+                                            alt="card image"></p>
+                                    <h4 class="card-title">Tony</h4>
+                                    <p class="card-text">
+                                        Tony is a software engineer
+                                        <br>
+                                        Bachelor's degree in computer science.
+                                    </p>
+                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm">
+                                        Flip The Card for more
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside" style="overflow: hidden;">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">Angular - Workshop</h4>
+                                    <p class="card-text text-muted lead">
+                                        I like that all the information students receive is up-to-date.
+                                        The course is very interesting and engaging, and I can already feel how my
+                                        communication skills and
+                                        critical thinking skills are improving after my first course.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5" style="background-color: #F7F8FA;">
+    <h2 class="text-center text-muted" style="font-weight: 100;">Trusted by companies</h2>
+    <div class="px-5">
+        <div class="container">
+            <owl-carousel-o [options]="customOptions" style="text-align: center;">
+                <ng-container *ngFor="let company of companies">
+                    <ng-template carouselSlide >
+                        <div  style="padding: 20px;" class="mt-4" [innerHTML]='company'></div>
+                    </ng-template>
+                </ng-container>
+            </owl-carousel-o>
+        </div>
+    </div>
+</section>

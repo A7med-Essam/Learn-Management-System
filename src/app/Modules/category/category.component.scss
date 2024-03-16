@@ -1,0 +1,33 @@
+.business-home-main-block {
+    background: linear-gradient(-45deg, #f44a4a 0, #6e1a52 100%);
+    position: relative;
+    min-height: 200px;
+    margin-bottom: 100px;
+}
+
+@media (max-width: 767px) {
+    .business-home-main-block {
+        margin-bottom: 250px;
+    }
+}
+.inside-box {
+    width: 70%;
+    position: absolute;
+    top: 15%;
+    min-height: 250px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.content-box {
+    padding: 20px;
+}
+.content-box img {
+    border: 5px solid white;
+    max-width: 100%;
+}
+.content-box .block-heading {
+    align-content: center;
+}

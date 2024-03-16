@@ -1,0 +1,243 @@
+<main id="profile">
+    <header class="bg-gray py-5">
+        <div class="container">
+            <h2 style="padding-left: 20px;">My Profile</h2>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row mx-0 pb-5">
+                <div class="col-xl-3 col-lg-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="item avatar">
+                                <div class="avatar-upload">
+                                    <div class="avatar-edit">
+                                        <form [formGroup]='ProfileImage' (ngSubmit)='UpdateProfileImage(ProfileImage)'>
+                                            <input type="file" id="imageUpload" name="user_img" 
+                                            formControlName="file" accept=".png, .jpg, .jpeg" hidden multiple="false" 
+                                            (change)="readURL($event.target,imageUpload);UpdateProfileImage(ProfileImage);">
+                                            <label for="imageUpload">
+                                                <i class="fas fa-pencil-alt"></i>
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <div class="avatar-preview">
+                                        <div class="avatar-preview-img" id="imagePreview" #imageUpload>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="user-name">User Name</div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="item categories">
+                                <ul class="list-unstyled">
+                                    <li routerLink="/Courses" routerLinkActive="ProfileActive">
+                                        <i class="fa fa-bookmark"></i>
+                                        <span>My Courses</span>
+                                    </li>
+                                    <li routerLink="/Wishlist" routerLinkActive="ProfileActive">
+                                        <i class="fa fa-heart"></i>
+                                        <span>My Wishlist</span>
+                                    </li>
+                                    <li routerLink="/PurchaseHistory" routerLinkActive="ProfileActive">
+                                        <i class="fa fa-history"></i>
+                                        <span>Purchase History</span>
+                                    </li>
+                                    <li routerLink="/profile" routerLinkActive="ProfileActive">
+                                        <i class="fa fa-user"></i>
+                                        <span>My Profile</span>
+                                    </li>
+                                    <li routerLink="/bankDetails" routerLinkActive="ProfileActive">
+                                        <i class="fas fa-university"></i>
+                                        <span>My Bank Details</span>
+                                    </li>
+                                    <li routerLink="/FactorAuth" routerLinkActive="ProfileActive">
+                                        <i class="fa fa-check"></i>
+                                        <span>2 Factor Auth</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-8">
+                    <form [formGroup]='ProfileForm' (ngSubmit)='onSubmit(ProfileForm.value)'>
+                        <div class="item Personal_Information">
+                            <div class="profile-heading">Personal Information</div>
+
+                                <div class="row m-0">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="name" class="">First Name</label>
+                                            <input type="text" id="name" name="fname" class="form-control"
+                                                placeholder="Enter First Name" formControlName='firstName'>
+                                                <small class="text-danger ml-1" *ngIf="ProfileForm.get('firstName')?.touched &&
+                                                ProfileForm.get('firstName')?.invalid">This field is required</small>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" id="email" name="email" class="form-control" formControlName='email'
+                                                placeholder="info@example.com">
+                                            <small class="text-danger ml-1" 
+                                                *ngIf="ProfileForm.get('email')?.touched && ProfileForm.get('email')?.hasError('required')">
+                                                This field is required
+                                            </small>
+                                            <small class="text-danger ml-1" 
+                                            *ngIf="ProfileForm.get('email')?.touched && ProfileForm.get('email')?.hasError('email')">
+                                            Email is invalid
+                                            </small>
+                                        </div>
+                                    </div>
+    
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="Username">Last Name</label>
+                                            <input type="text" id="lname" name="lname" class="form-control"
+                                                placeholder="Enter Last Name" formControlName='lastName'>
+                                                <small class="text-danger ml-1" *ngIf="ProfileForm.get('lastName')?.touched &&
+                                                ProfileForm.get('lastName')?.invalid">This field is required</small>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="mobile">Mobile</label>
+                                            <input type="text" name="mobile" id="mobile"
+                                                class="form-control" placeholder="Enter Mobile No." formControlName='phone'>
+                                                <small class="text-danger ml-1" *ngIf="ProfileForm.get('phone')?.touched &&
+                                                ProfileForm.get('phone')?.hasError('required')">This field is required</small>
+
+                                                <small class="text-danger ml-1" *ngIf="ProfileForm.get('phone')?.touched &&
+                                                ProfileForm.get('phone')?.hasError('minlength')">Phone Number must be more than 10 numbers.</small>
+
+                                                <small class="text-danger ml-1" *ngIf="ProfileForm.get('phone')?.touched &&
+                                                ProfileForm.get('phone')?.hasError('maxlength')">Phone Number must be less than 12 numbers.</small>
+                                        </div>
+                                    </div>
+    
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="bio" class="">Address</label>
+                                            <textarea id="bio" name="address" class="form-control" formControlName='address'
+                                                placeholder="Enter your Address"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-group update-password">
+                                            <label for="myCheck"><b>Update Password:</b></label>
+                                            <input type="checkbox" name="update_pass" id="myCheck" style="margin-left: 10px;" (click)="TogglePassword()">
+                                        </div>
+                                        <div class="password" id="update-password" #updatePassword>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="confirmpassword">Password:</label>
+                                                            <input name="password" class="form-control" id="password" type="password" placeholder="Enter Password" formControlName='password' >
+                                                            <small class="text-danger ml-1" *ngIf="ProfileForm.get('password')?.touched &&
+                                                                ProfileForm.get('password')?.invalid">
+                                                                Password must be at least 6 characters, <br>
+                                                                Password must have at least one non alphanumeric character, <br>
+                                                                Password must have at least one number, <br>
+                                                                Password must have at least one lowercase ('a'-'z'), <br>
+                                                                Password must have at least one uppercase ('A'-'Z').
+                                                            </small>
+                                                        </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label>Confirm Password:</label>
+                                                            <input type="password" name="confirm_password" id="confirm_password" class="form-control" placeholder="Confirm Password" formControlName='confirm_password'> 
+                                                            <!-- <span id="message"></span> -->
+                                                            <small class="text-danger ml-1" *ngIf="ProfileForm.get('confirm_password')?.touched && 
+                                                            ProfileForm.get('confirm_password')?.invalid">Your password does not match
+                                                            </small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                        </div>
+
+                        <div class="item Social_Profile">
+                            <div class="social-profile-block">
+                                <div class="social-profile-heading">Social Profile</div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="social-block">
+                                            <div class="form-group">
+                                                <label for="facebook">Facebook Url</label><br>
+                                                <div class="row">
+                                                    <div class="col-2 flex-center">
+                                                        <div class="profile-update-icon">
+                                                            <i class="fab fa-facebook-f facebook"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <input type="text" name="fb_url"  id="facebook" class="form-control" placeholder="Facebook.com/" formControlName='facebookUrl'>
+                                                    </div>
+                                                </div>    
+                                            </div>
+                                        </div>
+                                        <div class="social-block">
+                                            <div class="form-group">
+                                                <label for="behance2">Youtube Url</label><br>
+                                                <div class="row">
+                                                    <div class="col-2 flex-center">
+                                                        <div class="profile-update-icon">
+                                                                <i class="fab fa-youtube youtube"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <input type="text" name="youtube_url" id="behance2" class="form-control" placeholder="youtube.com/" formControlName='youtubeUrl'>
+                                                    </div>
+                                                </div>    
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="social-block">
+                                            <div class="form-group">
+                                                <label for="twitter">Twitter Url</label><br>
+                                                <div class="row">
+                                                    <div class="col-2 flex-center">
+                                                        <div class="profile-update-icon">
+                                                                <i class="fab fa-twitter twitter"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <input type="text" name="twitter_url"  id="twitter" class="form-control" placeholder="Twitter.com/" formControlName='twitterUrl'>
+                                                    </div>
+                                                </div>    
+                                            </div>
+                                        </div>
+                                        <div class="social-block">
+                                            <div class="form-group">
+                                                <label for="dribbble2">LinkedIn Url</label><br>
+                                                <div class="row">
+                                                    <div class="col-2 flex-center">
+                                                        <div class="profile-update-icon">
+                                                                <i class="fab fa-linkedin-in linkedin"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <input type="text" name="linkedin_url" id="dribbble2" class="form-control" placeholder="Linkedin.com/" formControlName='linkedInUrl'>
+                                                    </div>
+                                                </div>    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="upload-button">
+                            <button type="submit" class="btn" title="upload items" id="Update_Profile">Update Profile</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

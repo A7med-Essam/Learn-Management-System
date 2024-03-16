@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  UrlEndPoint : "http://docs.denizey.net/workshops/LMS/public/api/"
 };

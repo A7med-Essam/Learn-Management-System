@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="20px" viewBox="0 0 16 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>Icons/Editors/Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M19.9123077,9.54979078 C19.8561538,9.40926077 19.7730769,9.2766257 19.6615385,9.1629385 L13.5076923,2.84698282 C13.0569231,2.38433906 12.3269231,2.38433906 11.8761538,2.84698282 C11.4253846,3.30883707 11.4253846,4.05885681 11.8761538,4.52150057 L16.0607692,8.81556094 L1.15384615,8.81556094 C0.516923077,8.81556094 0,9.34610121 0,9.99980263 C0,10.653504 0.516923077,11.1840443 1.15384615,11.1840443 L16.0607692,11.1840443 L11.8761538,15.4788942 C11.4253846,15.9407484 11.4253846,16.6907682 11.8761538,17.1534119 C12.1015385,17.3847338 12.3969231,17.5 12.6923077,17.5 C12.9869231,17.5 13.2823077,17.3847338 13.5076923,17.1534119 L19.6615385,10.8374562 C19.7730769,10.7229796 19.8561538,10.5903445 19.9123077,10.4498145 C19.9146154,10.444288 19.9153846,10.4379721 19.9176923,10.4316561 C19.9692308,10.297442 20,10.1529646 20,9.99980263 C20,9.8474302 19.9692308,9.70216321 19.9176923,9.56794916 C19.9153846,9.5624227 19.9146154,9.55531725 19.9123077,9.54979078" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Certifications-overview" transform="translate(-152.000000, -1838.000000)">
+            <g id="Group-6" transform="translate(9.000000, 1563.000000)">
+                <g id="Icons/Actions/Arrow/Next" transform="translate(151.000000, 285.000000) rotate(-270.000000) translate(-151.000000, -285.000000) translate(141.000000, 275.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Icons/Actions/Next" fill="#3F5D75" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <g id="Colors/App/Icon" mask="url(#mask-2)" fill="#7C98B6" fill-rule="evenodd">
+                        <g id="Colors/Dark-Greys/Eerie">
+                            <polygon id="Rectangle-3-Copy-36" points="0 0 20 0 20 20 0 20"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,96 @@
+
+.signup-block-main-block{
+    padding: 60px 0;
+    .signup-heading{
+        p{
+            font-size: 17px;
+            font-weight: 500;
+            padding: 20px;
+            border: 1px solid #DEDFE0;
+            border-radius: 9px 9px 0 0;
+            margin-bottom: 0;
+        }
+    }
+    .signup-block{
+        border: solid 1px #DEDFE0;
+        border-radius: 0 0 9px 9px;
+        padding: 40px 50px;
+        .signin-link{
+            font-size: 12px;
+            margin-top: 4px;
+            .btn-info{
+                width: 100%;
+                text-align: left;
+                background-color: #1A538A;
+                font-size: 12px;
+                border-radius: 3px;
+                color: #fff;
+                padding: 10px 15px;
+                background: #0284a2;
+                color: #fff;
+                font-size: 15px;
+                font-weight: 500;
+                border:0;
+              
+                border-radius: 1px;
+                -webkit-transition: all 0.5s ease;
+                -ms-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+            }
+        }
+        .signup-form{
+            padding: 20px 0 0;
+            .form-group{
+              i{
+                position: absolute;
+                z-index: 1111;
+                top: 17px;
+                left: 20px;
+                color: #CACBCC;
+              }
+                position: relative;
+                // bottom: 10px;
+                text-align: -webkit-center;
+                margin-bottom: 15px;
+                .form-control{
+                    padding: 10px 45px;
+                    border-radius: 4px;
+                    border: 1px solid #CACBCC;
+                }
+                .form-check{
+                    .form-check-input{
+                        width: 20px;
+                        display: inline-block;
+                        // float: left;
+                        height: 20px;
+                        margin-top: 2px;
+                    }
+                    .form-check-label{
+                        font-size: 18px;
+                        margin-left: 10px;
+                    }
+                }
+                .btn-primary{
+                    padding: 20px 25px;
+                    background-color:#f44a4a;
+                    color: #fff;
+                    font-size: 15px;
+                    font-weight: 400;
+                    border: 1px solid transparent;
+                    -webkit-transition: none;
+                    -moz-transition: none;
+                    transition: none;
+                    -webkit-transition: all 0.5s ease;
+                    -ms-transition: all 0.5s ease;
+                    -o-transition: all 0.5s ease;
+                    -moz-transition: all 0.5s ease;
+                    transition: all 0.5s ease;
+                    padding: 10px 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,366 @@
+// online learning section
+.borderGradient {
+    background: #000;
+    position: relative;
+}
+.borderGradient:first-child:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(-45deg, #6e1a52 0, #f44a4a 100%);
+    top: 0px;
+    left: 0;
+}
+
+// WHAT OUR STUDENTS SAY ABOUT US section
+#team {
+    background: #eee !important;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #f44a4a;
+    border-color: #f44a4a;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #eb474a;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#team .card {
+    border: none;
+    background: #ffffff;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    border-radius: 0.25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.mainflip {
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frontside {
+    position: relative;
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.backside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 1s;
+    -o-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+    min-height: 312px;
+}
+
+.backside .card a {
+    font-size: 18px;
+    color: #f44a4a !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+    color: #f44a4a !important;
+}
+
+.frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+// Over 100 courses section
+
+.course-card .icon {
+    background: #f44a4a;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.course-card {
+    background: none repeat scroll 0 0 #f0f0f0;
+    padding: 20px 0px;
+    margin-bottom: 25px;
+    align-items: center;
+    transition: all 0.5s;
+    margin: 10px;
+}
+
+.course-card:hover {
+    background: #f44a4a;
+    color: #fff;
+    .icon {
+        background-color: #fff;
+        color: #f44a4a;
+    }
+}
+
+.nav-carousel {
+    padding: 10px;
+    background: linear-gradient(-45deg, #6e1a52 0, #f44a4a 100%);
+}
+.nav-carousel owl-carousel-o {
+    color: white;
+}
+
+::ng-deep owl-carousel-o .owl-item a {
+    text-decoration: none !important;
+    color: white;
+}
+/* Carousel base class */
+#myCarousel {
+    .carousel-item.first {
+        background-image: url("../../../../../assets/imgs/home-slider/15974359982976.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+    }
+    .carousel-item.second {
+        background-image: url("../../../../../assets/imgs/home-slider/15974360873025.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+    }
+    .carousel-item.third {
+        background-image: url("../../../../../assets/imgs/home-slider/15974361563617493.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+    }
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+    height: 32rem;
+}
+.carousel-item > img {
+    position: relative;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 32rem;
+}
+.carousel-item {
+    position: relative;
+    min-width: 100%;
+    height: 32rem;
+}
+.carousel-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #6e1a52, $alpha: 0.9);
+    opacity: 0.5;
+}
+.carousel-item > img::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+}
+.field-icon {
+    outline-color: #f44a4a;
+    border: 3px solid var(--text-red-color);
+    border-right: none;
+}
+
+
+.learning-block {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+}
+
+.learning-block i {
+    margin-right: 50px;
+    font-size: 50px;
+}
+.learning-block .work-heading {
+    font-size: large;
+}
+
+.team-div {
+    background-color: #f5f5f5;
+}
+.team-div .team-content {
+    position: relative;
+}
+
+.form-control {
+    padding: 0 20px;
+}
+
+@media all and (max-width: 1200px) {
+    .search-div {
+        width: 60%;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .search-div {
+        width: 90%;
+    }
+}
+
+.carousel-item {
+    margin-right: 0;
+}
+
+.learning-courses {
+    color: var(#fff) !important;
+    margin-bottom: 20px;
+}
+.learning-courses ul {
+    border-bottom: 1px solid #dedfe0;
+}
+.learning-courses .nav-item {
+    color: #0284a2;
+}
+
+.learning-courses .nav-item.nav-link.active {
+    border: none;
+    border-bottom: 5px solid var(#0284a2);
+}
+
+.card {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+owl-carousel-o {
+    color: white;
+}
+// ::ng-deep owl-carousel-o  .owl-nav{
+//   position: relative;
+// }
+::ng-deep owl-carousel-o {
+    position: relative;
+}
+::ng-deep owl-carousel-o .owl-prev,
+::ng-deep owl-carousel-o .owl-next {
+    position: absolute;
+    color: #f44a4a !important;
+    border-radius: 25px !important ;
+    padding: 0px 7px !important;
+    border: 1px solid #f44a4a;
+    background-color: white !important;
+    font-weight: bolder;
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -webkit-border-radius: 25px !important ;
+    -moz-border-radius: 25px !important ;
+    -ms-border-radius: 25px !important ;
+    -o-border-radius: 25px !important ;
+}
+::ng-deep owl-carousel-o .owl-next {
+    top: 40%;
+    right: -5px;
+}
+::ng-deep owl-carousel-o .owl-item .mat-card img {
+    display: block;
+    width: -webkit-fill-available !important;
+}
+::ng-deep owl-carousel-o .owl-prev {
+    top: 40%;
+    left: -5px;
+}
+
+.card {
+    height: 450px;
+    border: none;
+    cursor: pointer;
+    transition: all 1s !important;
+    &:hover {
+        transform: translateY(1%);
+    }
+}
+
+::ng-deep .mat-tab-group.mat-primary .mat-ink-bar {
+    background-color: #f44a4a !important;
+}

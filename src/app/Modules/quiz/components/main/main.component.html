@@ -1,0 +1,72 @@
+<div class="row mx-0 my-5" *ngIf="!Flag">
+    <div class="col-6 offset-3">
+        <div class="info_box border mx-auto" *ngIf="QuizDetails; else NoQuiz">
+            <div class="info-title"><span>Some Rules of this Quiz</span></div>
+            <div class="info-list">
+                <div class="info">1. There are {{ QuizDetails?.number }} questions</div>
+                <div class="info">
+                    2. You will have only 
+                    <span>{{math.round(QuizDetails.duration/QuizDetails.number)| convertToSeconds}}</span> 
+                    <span *ngIf="(QuizDetails.duration/QuizDetails.number) >= 1"> minute</span> 
+                    <span *ngIf="(QuizDetails.duration/QuizDetails.number) < 1"> Seconds</span> 
+                    per each question.
+                </div>
+                <div class="info">3. Once you submit your answer, it can't be undone.</div>
+                <div class="info">4. You can't select any option once time goes off.</div>
+                <div class="info">5. You can't exit from the Quiz after start the quiz.</div>
+                <div class="info">6. You'll get points on the basis of your correct answers.</div>
+            </div>
+            <div class="buttons">
+                <button class="quit" routerLink="/home">Exit Quiz</button>
+                <button class="restart" (click)="quizStart()">Continue</button>
+            </div>
+        </div>
+        <ng-template #NoQuiz>
+            <h1 class="text-danger text-center">There is no quiz for this topic</h1>
+            <br>
+            <div class="text-danger text-center">
+                <i>
+                    this quiz is no longer exist anymore
+                </i>
+            </div>
+        </ng-template>
+    </div>
+</div>
+
+<div class="row mx-0 my-5" *ngIf="Flag">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <div class="quiz_box">
+            <header style="border-bottom: 1px solid rgb(160, 160, 160); padding: 40px;">
+                <div class="title">Quiz Application
+                    <h6 style="margin-left: 10px;">Question {{ questionIndex + 1 }} of {{ totalQuestions }}</h6>
+                </div>
+                <div class="timer">
+                    <div class="time_left_txt">Time Left</div>
+                    <div class="timer_sec">{{timer_sec}}</div>
+                </div>
+                <div class="time_line"></div>
+            </header>
+            <section>
+                <div class="que_text">
+                    <p class="card-text">{{ questions[questionIndex] }}</p>
+                </div>
+                <div class="option_list mt-4">
+                        <div class="option_list" *ngFor="let choice of choices[questionIndex]; let i = index">
+                            <div class="option" [attr.id]="'choice' + i" (click)="clickChoice($event)"
+                            [class.choice-selected]="selectedIndex == i">
+                                <span [attr.id]="'choice' + i" (click)="clickChoice($event)"
+                                [class.choice-selected]="selectedIndex == i">{{ choice }}</span>
+                            </div>
+                        </div>
+                </div>
+            </section>
+            <footer>
+                <button (click)="onNextQuestion()" type="button" class="next_btn">
+                    {{ finished ? "Check Result" : "Next Que" }}
+                </button>
+            </footer>
+        </div>
+    </div>
+</div>
+
